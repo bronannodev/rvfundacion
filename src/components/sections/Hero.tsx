@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, Clock, Calendar, Search } from 'lucide-react';
+import { Countdown } from '../ui/Countdown';
 
 interface HeroProps {
   onOpenCheckModal?: () => void;
@@ -37,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckModal }) => {
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
         {/* Main Logo */}
         <div className="mb-3 w-full flex justify-center">
-          <h1 className="sr-only">DESAFÍO 60’ — Backyard Ultra : La Picada</h1>
+          <h1 className="sr-only">Backyard Ultra : La Picada</h1>
           <img
             src="/logos/Backyard La Rioja.webp"
             alt="Backyard La Rioja"
@@ -46,13 +47,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckModal }) => {
         </div>
 
         {/* Subtitle */}
-        <div className="inline-flex items-center gap-2 sm:gap-3 text-xs sm:text-base md:text-lg font-mono tracking-widest text-[#D97736] font-semibold uppercase mb-6 sm:mb-8">
+        <div className="inline-flex items-center gap-2 sm:gap-3 text-xs sm:text-base md:text-lg font-mono tracking-widest text-[#D97736] font-semibold uppercase mb-6 sm:mb-7">
           <span>6 VUELTAS</span>
           <span className="text-[#6B7280]">·</span>
           <span>6 HORAS</span>
           <span className="text-[#6B7280]">·</span>
           <span>1 DESAFÍO</span>
         </div>
+
+        {/* Countdown Timer */}
+        <Countdown targetDate="2026-09-05T08:00:00-03:00" className="mb-8" />
 
         {/* CTAs: 2 Essential Buttons */}
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
