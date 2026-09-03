@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Clock, Calendar, Search } from 'lucide-react';
 import { Countdown } from '../ui/Countdown';
+import { RaceNoticeCard } from '../ui/RaceNoticeCard';
 
 interface HeroProps {
   onOpenCheckModal?: () => void;
@@ -91,6 +92,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckModal }) => {
             <span className="text-[#E5E7EB]">08:00 — 14:00</span>
           </div>
         </div>
+
+        {/* Race Day Important Notice Card */}
+        <RaceNoticeCard />
       </div>
     </section>
   );

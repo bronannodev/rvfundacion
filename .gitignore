@@ -83,6 +83,7 @@ supabase/
 # Exported participant files / Local Database dumps
 *.csv
 participantes_*.json
+participantes_*.md
 inscriptos_*.json
 cronometraje_*.json
 
