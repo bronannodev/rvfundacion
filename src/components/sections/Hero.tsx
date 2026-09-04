@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Clock, Calendar, Search } from 'lucide-react';
+import { ArrowUpRight, Clock, Calendar, Search, MapPin } from 'lucide-react';
 import { Countdown } from '../ui/Countdown';
 import { RaceNoticeCard } from '../ui/RaceNoticeCard';
 
@@ -80,17 +80,29 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckModal }) => {
           )}
         </div>
 
-        {/* Schedule & Date */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 px-5 py-2.5 rounded-full bg-[#111317]/80 border border-[#23272F]/80 backdrop-blur-md text-xs font-mono text-[#9CA3AF]">
-          <div className="flex items-center gap-2">
-            <Calendar className="w-3.5 h-3.5 text-[#D97736]" />
-            <span className="text-[#E5E7EB] font-bold">SÁBADO 5 DE SEPTIEMBRE</span>
+        {/* Schedule, Date & Location */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 px-5 py-2.5 rounded-full bg-[#111317]/80 border border-[#23272F]/80 backdrop-blur-md text-xs font-mono text-[#9CA3AF]">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-3.5 h-3.5 text-[#D97736]" />
+              <span className="text-[#E5E7EB] font-bold">SÁBADO 5 DE SEPTIEMBRE</span>
+            </div>
+            <div className="w-1 h-1 rounded-full bg-[#374151] hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <Clock className="w-3.5 h-3.5 text-[#D97736]" />
+              <span className="text-[#E5E7EB]">08:00 — 14:00</span>
+            </div>
           </div>
-          <div className="w-1 h-1 rounded-full bg-[#374151] hidden sm:block" />
-          <div className="flex items-center gap-2">
-            <Clock className="w-3.5 h-3.5 text-[#D97736]" />
-            <span className="text-[#E5E7EB]">08:00 — 14:00</span>
-          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=-29.440037975159953,-66.91236968215821"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#14161B]/90 hover:bg-[#1C1F26] text-[#E5E7EB] hover:text-white font-mono text-xs tracking-wider uppercase border border-[#2A2E38] hover:border-[#D97736]/50 transition-all backdrop-blur-sm group"
+          >
+            <MapPin className="w-3.5 h-3.5 text-[#D97736] group-hover:-translate-y-0.5 transition-transform" />
+            <span>VER UBICACIÓN</span>
+          </a>
         </div>
 
         {/* Race Day Important Notice Card */}
