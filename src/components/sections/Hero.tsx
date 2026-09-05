@@ -65,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckModal }) => {
             onClick={() => scrollToSection('registro')}
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#D97736] text-white font-bold text-sm tracking-wider uppercase hover:bg-[#E58B4E] active:scale-[0.98] shadow-lg shadow-[#D97736]/20 transition-all flex items-center justify-center gap-2"
           >
-            <span>QUIERO ANOTARME</span>
+            <span>TE ESPERAMOS ESTE SÁBADO</span>
             <ArrowUpRight className="w-4 h-4" />
           </button>
 

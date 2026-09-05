@@ -67,7 +67,10 @@ export const App: React.FC = () => {
         <Rules />
         <TimingExample />
         <FAQ />
-        <RegistrationForm onOpenTerms={() => setIsTermsModalOpen(true)} />
+        <RegistrationForm
+          onOpenTerms={() => setIsTermsModalOpen(true)}
+          onOpenCheckModal={() => setIsCheckModalOpen(true)}
+        />
       </main>
 
       {/* Footer */}

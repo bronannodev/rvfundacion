@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
             onClick={(e) => handleLinkClick(e, '#registro')}
             className="inline-flex items-center gap-1.5 px-5 py-2 rounded-lg bg-[#D97736] text-white font-bold text-xs tracking-wider uppercase hover:bg-[#E58B4E] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#D97736]/20"
           >
-            <span>ANOTARME</span>
+            <span>INFO EVENTO</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
@@ -99,9 +99,9 @@ export const Navbar: React.FC = () => {
           <a
             href="#registro"
             onClick={(e) => handleLinkClick(e, '#registro')}
-            className="px-3.5 py-1.5 rounded-md bg-[#D97736] text-white font-bold text-[11px] font-mono tracking-wider uppercase"
+            className="px-3 py-1.5 rounded-md bg-[#D97736] text-white font-bold text-[11px] font-mono tracking-wider uppercase"
           >
-            ANOTARME
+            INFO
           </a>
 
           <button
@@ -136,7 +136,7 @@ export const Navbar: React.FC = () => {
                 onClick={(e) => handleLinkClick(e, '#registro')}
                 className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#D97736] text-white font-bold text-xs tracking-wider uppercase"
               >
-                <span>QUIERO ANOTARME</span>
+                <span>TE ESPERAMOS EL SÁBADO</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>

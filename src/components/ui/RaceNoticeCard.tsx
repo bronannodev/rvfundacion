@@ -53,9 +53,12 @@ export const RaceNoticeCard: React.FC = () => {
         </li>
       </ol>
 
-      <div className="mt-4 pt-3 border-t border-[#23272F] flex items-center justify-between text-xs font-mono text-[#9CA3AF]">
+      <div className="mt-4 pt-3 border-t border-[#23272F] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs font-mono text-[#9CA3AF]">
         <span className="text-[#E5E7EB]">
           • No olvides tu alimento no perecedero
+        </span>
+        <span className="text-[#D97736] font-semibold">
+          ¿No te anotaste? ¡Te esperamos igualmente!
         </span>
       </div>
     </div>

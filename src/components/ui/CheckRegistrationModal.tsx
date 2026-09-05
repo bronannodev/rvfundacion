@@ -174,19 +174,23 @@ export const CheckRegistrationModal: React.FC<CheckRegistrationModalProps> = ({
 
         {/* Result Not Found */}
         {searched && !participant && !errorMsg && (
-          <div className="border border-[#23272F] p-4 text-center space-y-3 bg-[#14161C]">
+          <div className="border border-[#23272F] p-4 sm:p-5 text-center space-y-3 bg-[#14161C] rounded-xl">
             <p className="text-xs text-[#9CA3AF]">
-              No encontramos registros con el DNI <span className="text-white font-mono">{dniInput}</span>.
+              No encontramos registros con el DNI <span className="text-white font-mono font-bold">{dniInput}</span>.
             </p>
+            <div className="py-1 px-3 rounded-lg bg-[#1D1712] border border-[#D97736]/30 text-xs text-[#F3F4F6] leading-relaxed">
+              <span className="text-[#D97736] font-bold block mb-1">¡Te esperamos igualmente!</span>
+              El registro online ha concluido, pero te esperamos este sábado para compartir y disfrutar de la jornada.
+            </div>
             <button
               type="button"
               onClick={() => {
                 handleClose();
                 onGoToRegister();
               }}
-              className="px-4 py-2 bg-white text-black font-bold text-xs uppercase hover:bg-[#E5E7EB] transition-colors"
+              className="px-4 py-2 bg-[#23272F] hover:bg-[#2F343F] text-white font-mono text-xs uppercase rounded-lg transition-colors"
             >
-              Anotarme Ahora
+              Ver información del evento
             </button>
           </div>
         )}

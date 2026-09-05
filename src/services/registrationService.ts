@@ -87,12 +87,22 @@ const generateSimpleRegistrationNumber = async (): Promise<string> => {
   return String(nextNumber).padStart(3, '0');
 };
 
+export const REGISTRATIONS_OPEN = false;
+
 /**
  * Registra un nuevo participante con Rate Limiting, validación estricta y sanitización.
  */
 export const registerParticipant = async (
   formData: RegistrationFormData
 ): Promise<RegistrationSubmissionResult> => {
+  // 0. Comprobación de inscripciones abiertas
+  if (!REGISTRATIONS_OPEN) {
+    return {
+      success: false,
+      error: 'El registro online ha concluido. ¡Te esperamos directamente este sábado!',
+    };
+  }
+
   // 1. Verificación de Rate Limit
   const rateLimit = checkRateLimit();
   if (!rateLimit.allowed) {
